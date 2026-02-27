@@ -2,12 +2,12 @@ from http import HTTPStatus
 
 from fastapi.testclient import TestClient
 
-from fast_zero.app import app
+from fastapi_zero.app import app
 
-client = TestClient(app)
+# client = TestClient(app)
 
 
-def test_root_returns_hello_world():
+def test_read_root():
     """
     This test have 3 steps (AAA)
     - A: Arrange
@@ -20,3 +20,12 @@ def test_root_returns_hello_world():
 
     assert response.status_code == HTTPStatus.OK
     assert response.json() == {'message': 'Hello World!'}
+
+
+def test_new_page():
+    client = TestClient(app)
+
+    response = client.get('/test_html')
+
+    assert response.status_code == HTTPStatus.OK
+    assert '<h1> Hello world! </h1>' in response.text
