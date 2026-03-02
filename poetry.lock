@@ -1223,22 +1223,22 @@ files = [
 
 [[package]]
 name = "pwdlib"
-version = "0.2.1"
+version = "0.3.0"
 description = "Modern password hashing for Python"
 optional = false
-python-versions = ">=3.8"
+python-versions = ">=3.10"
 groups = ["main"]
 files = [
-    {file = "pwdlib-0.2.1-py3-none-any.whl", hash = "sha256:1823dc6f22eae472b540e889ecf57fd424051d6a4023ec0bcf7f0de2d9d7ef8c"},
-    {file = "pwdlib-0.2.1.tar.gz", hash = "sha256:9a1d8a8fa09a2f7ebf208265e55d7d008103cbdc82b9e4902ffdd1ade91add5e"},
+    {file = "pwdlib-0.3.0-py3-none-any.whl", hash = "sha256:f86c15c138858c09f3bba0a10984d4f9178158c55deaa72eac0210849b1a140d"},
+    {file = "pwdlib-0.3.0.tar.gz", hash = "sha256:6ca30f9642a1467d4f5d0a4d18619de1c77f17dfccb42dd200b144127d3c83fc"},
 ]
 
 [package.dependencies]
-argon2-cffi = {version = ">=23.1.0,<24", optional = true, markers = "extra == \"argon2\""}
+argon2-cffi = {version = ">=23.1.0,<26", optional = true, markers = "extra == \"argon2\""}
 
 [package.extras]
-argon2 = ["argon2-cffi (>=23.1.0,<24)"]
-bcrypt = ["bcrypt (>=4.1.2,<5)"]
+argon2 = ["argon2-cffi (>=23.1.0,<26)"]
+bcrypt = ["bcrypt (>=4.1.2,<6)"]
 
 [[package]]
 name = "pycparser"
@@ -2479,4 +2479,4 @@ files = [
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.13,<4.0"
-content-hash = "9c0a7c06c911cad21b3464a472b19677d657679c72a1681efcac0029e092267d"
+content-hash = "12577d1f037dbe600e371b0c0b7c4d0e5af907f34ce261148c7e2fc9e191d64c"
